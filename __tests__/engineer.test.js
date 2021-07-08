@@ -14,7 +14,7 @@ describe("Engineer", () => {
         });
     });
 
-    describe("getRole", () =>{
+    describe("getRole", () => {
         it("Gets role", () => {
             const testValue = "Engineer";
             const e = new Engineer("Josh", "0", "test@test.com", "jalgonz");
