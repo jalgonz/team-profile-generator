@@ -8,7 +8,7 @@ describe("Engineer", () => {
     });
 
     it("Sets name, id, email, and gitHub properties", () => {
-        const e = new Employee("Josh", "0", "test@test.com", "jalgonz");
+        const e = new Engineer("Josh", "0", "test@test.com", "jalgonz");
 
         expect(e.name).toEqual("Josh");
         expect(e.id).toEqual("0");
@@ -19,7 +19,7 @@ describe("Engineer", () => {
     describe("getGitHub", () => {
         it("Gets GitHub", () => {
             const testValue = "jalgonz";
-            const e = new Employee("Josh", "0", "test@test.com", testValue);
+            const e = new Engineer("Josh", "0", "test@test.com", testValue);
             expect(e.getGitHub()).toBe(testValue);
         });
     });
@@ -27,7 +27,7 @@ describe("Engineer", () => {
     describe("getRole", () =>{
         it("Gets role", () => {
             const testValue = "Engineer";
-            const e = new Employee("Josh", "0", "test@test.com", "jalgonz");
+            const e = new Engineer("Josh", "0", "test@test.com", "jalgonz");
             expect(e.getRole()).toBe(testValue);
         });
     });
