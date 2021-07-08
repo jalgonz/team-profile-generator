@@ -6,7 +6,7 @@ describe("Employee", () => {
         expect(typeof(e)).toBe("object");
     });
 
-    it("Creates employee object and sets name, id and email properties", () => {
+    it("Sets name, id and email properties", () => {
         const e = new Employee("Josh", "0", "test@test.com");
 
         expect(e.name).toEqual("Josh");
