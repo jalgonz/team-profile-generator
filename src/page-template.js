@@ -133,5 +133,3 @@ module.exports = {
   generateHTML,
   employeeHTML,
 };
-
-${teamCards.join("")}
