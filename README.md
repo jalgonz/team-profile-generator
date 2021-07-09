@@ -15,11 +15,15 @@ You will need node.js, with the jest and inquirer packages.
 
 ## Demo
 
+[Video Demonstration of Team Profile Generator](https://drive.google.com/file/d/121G09wRit-fyzfAB9MwCgtiFM6iTQp__/view)
+
+Screenshot of generated HTML
+![Example of generated team page](/assets/gen-html.png)
+
 
 ## Link(s)
 
-1. [GitHub repository]()
-2. [Example of generated team page](/)
+[GitHub repository]()
 
 
 ## License
