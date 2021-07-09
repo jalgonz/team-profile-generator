@@ -5,96 +5,87 @@ function employeeHTML(team) {
   let employee;
   for (let i = 0; i < team.length; i++) {
     if (team[i].getRole() === "Manager") {
-      employee = `<section class="section">
-            <div class="columns">
-                <div class="container column is-one-fifth">
-                    <div class="card">
-                        <div class="card-content">
-                            <p class="title is-centered">
-                                ${team[i].name}
-                            </p>
-                            <p class="subtitle">
-                                <i class=""></i>
-                                ${team[i].getRole()}
-                            </p>
+      employee = `
+            <div class="container column is-one-fifth">
+                <div class="card">
+                    <div class="card-content">
+                        <p class="title is-centered">
+                            ${team[i].name}
+                        </p>
+                        <p class="subtitle">
+                            <i class=""></i>
+                            ${team[i].getRole()}
+                        </p>
+                    </div>
+                    <div class="card-content">
+                        <div class="box">
+                            ID: ${team[i].id}
                         </div>
-                        <div class="card-content">
-                            <div class="box">
-                                ID: ${team[i].id}
-                            </div>
-                            <div class="box">
-                                Email: ${team[i].email}
-                            </div>
-                            <div class="box">
-                                Office Number: ${team[i].officeNumber}
-                            </div>
+                        <div class="box">
+                            Email: ${team[i].email}
+                        </div>
+                        <div class="box">
+                            Office Number: ${team[i].officeNumber}
                         </div>
                     </div>
-                </div>
-            <div>
-        </section>`;
+                </div> 
+            </div>`;
 
       teamCards.push(employee);
     } else if (team[i].getRole() === "Engineer") {
-      employee = `<section class="section">
-      <div class="columns">
-          <div class="container column is-one-fifth">
-              <div class="card">
-                  <div class="card-content">
-                      <p class="title is-centered">
-                          ${team[i].name}
-                      </p>
-                      <p class="subtitle">
-                          <i class=""></i>
-                          ${team[i].getRole()}
-                      </p>
-                  </div>
-                  <div class="card-content">
-                      <div class="box">
-                          ID: ${team[i].id}
-                      </div>
-                      <div class="box">
-                          Email: ${team[i].email}
-                      </div>
-                      <div class="box">
-                          GitHub: ${team[i].gitHub}
-                      </div>
-                  </div>
-              </div>
-          </div>
-      <div>
-  </section>`;
+      employee = `
+            <div class="container column is-one-fifth">
+                <div class="card">
+                    <div class="card-content">
+                        <p class="title is-centered">
+                            ${team[i].name}
+                        </p>
+                        <p class="subtitle">
+                            <i class=""></i>
+                            ${team[i].getRole()}
+                        </p>
+                    </div>
+                    <div class="card-content">
+                        <div class="box">
+                            ID: ${team[i].id}
+                        </div>
+                        <div class="box">
+                            Email: ${team[i].email}
+                        </div>
+                        <div class="box">
+                            GitHub: ${team[i].gitHub}
+                        </div>
+                    </div>
+                </div>
+            </div>`;
 
       teamCards.push(employee);
     } else {
-      employee = `<section class="section">
-      <div class="columns">
-          <div class="container column is-one-fifth">
-              <div class="card">
-                  <div class="card-content">
-                      <p class="title is-centered">
-                          ${team[i].name}
-                      </p>
-                      <p class="subtitle">
-                          <i class=""></i>
-                          ${team[i].getRole()}
-                      </p>
-                  </div>
-                  <div class="card-content">
-                      <div class="box">
-                          ID: ${team[i].id}
-                      </div>
-                      <div class="box">
-                          Email: ${team[i].email}
-                      </div>
-                      <div class="box">
-                          GitHub: ${team[i].school}
-                      </div>
-                  </div>
-              </div>
-          </div>
-      <div>
-  </section>`;
+      employee = `
+            <div class="container column is-one-fifth">
+                <div class="card">
+                    <div class="card-content">
+                        <p class="title is-centered">
+                            ${team[i].name}
+                        </p>
+                        <p class="subtitle">
+                            <i class=""></i>
+                            ${team[i].getRole()}
+                        </p>
+                    </div>
+                    <div class="card-content">
+                        <div class="box">
+                            ID: ${team[i].id}
+                        </div>
+                        <div class="box">
+                            Email: ${team[i].email}
+                        </div>
+                        <div class="box">
+                            GitHub: ${team[i].school}
+                        </div>
+                    </div>
+                </div>
+            </div>`;
 
       teamCards.push(employee);
     }
@@ -126,7 +117,11 @@ function generateHTML(team) {
 
         <main>
             <div class="container">
-                ${teamCards.join("")}
+                <section class="section">
+                    <div class="columns">
+                        
+                    <div>
+                </section> 
             </div>
         </main>
     </body>    
@@ -138,3 +133,5 @@ module.exports = {
   generateHTML,
   employeeHTML,
 };
+
+${teamCards.join("")}
