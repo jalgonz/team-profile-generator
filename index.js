@@ -8,7 +8,7 @@ const fs = require("fs");
 const OUTPUT_DIR = path.resolve(__dirname, "output")
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
-const render = require("./src/page-template.js");
+const render = require("./src/page-template");
 
 const teamMembers = [];
 const idArray = [];
@@ -68,7 +68,7 @@ function appMenu() {
           if (pass) {
             return true;
           }
-          return "Please enter a positive number greater than zero.";
+          return "Please enter a positive number than zero.";
         }
       }
     ]).then(answers => {
@@ -241,7 +241,7 @@ function appMenu() {
     if (!fs.existsSync(OUTPUT_DIR)) {
       fs.mkdirSync(OUTPUT_DIR)
     }
-    fs.writeFileSync(outputPath, render(teamMembers), "utf-8");
+    fs.writeFileSync(outputPath, render.generateHTML(teamMembers));
   }
 
   createManager();
