@@ -119,7 +119,7 @@ function generateHTML(team) {
             <div class="container">
                 <section class="section">
                     <div class="columns">
-                        
+                        ${teamCards.join("")}
                     <div>
                 </section> 
             </div>
